@@ -2,6 +2,9 @@
 #include <math.h>
 #include <string.h>
 
+TEESTEETB
+
+
 //EXERCICIO 1
 void maior(){
     int read,maior;
