@@ -313,13 +313,125 @@ int maiorPrefixo (char s1 [], char s2 []) {
 
 
 //EXERCICIO 18
+int maiorSufixo (char s1 [], char s2 []) {
+    int count = 0;
+    int len1 = strlen(s1) - 1;
+    int len2 = strlen(s2) - 1;
+    
+    while (s1[len1] && s2[len2]) {
+        if (s1[len1] == s2[len2]) {
+            count++;
+            len1--; len2--;
+        }
+        else{
+            break;
+        }
+    }
 
+    /*
+    Também daria:
+    for(; s1[len1] && s2[len2] && s1[len1] == s2[len2]; len1--, len2--){
+        count++;
+    }
+    */
+    
+    return count;
+}
 
 
 
 //EXERCICIO 19
+int sufPref(char s1[], char s2[])
+{
+    int i1 = 0, i2 = 0;
+    
+    for (; s1[i1]; i1++)
+    {
+        if (s1[i1] == s2[i2]){
+            i2++;
+        }
+        else{
+            i2 = 0;
+        }
+    }
+    return i2;
+}
+
+
 
 //EXERCICIO 20
+int contaPal (char s[]) {
+    int i = 0, count = 0;
+    char last = '\0';
+    
+    for(i = 0; s[i]; i++){
+        if(!isspace(s[i]) && (s[i+1] == ' ' || s[i+1] == '\0'))
+        {
+            count++;
+        }
+    }
+    
+    return count;
+}
+
+
+
+//EXERCICIO 21
+
+
+
+
+//EXERCICIO 22
+
+
+
+
+//EXERCICIO 23
+
+
+
+
+
+//EXERCICIO 24
+
+
+
+
+//EXERCICIO 25
+
+
+
+
+//EXERCICIO 26
+
+
+
+
+//EXERCICIO 27
+
+
+
+
+
+//EXERCICIO 28
+
+
+
+//EXERCICIO 29
+
+
+
+
+//EXERCICIO 30
+
+
+
+
+//EXERCICIO 31
+
+
+
+
 
 int main() {
     return 0;
