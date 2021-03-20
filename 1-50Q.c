@@ -2,8 +2,6 @@
 #include <math.h>
 #include <string.h>
 
-TEESTEETB
-
 
 //EXERCICIO 1
 void maior(){
@@ -20,6 +18,7 @@ void maior(){
 }
 
 
+
 //EXERCICIO 2
 void media(){
     int read, soma = 0, count = 0, media;
@@ -32,6 +31,7 @@ void media(){
     media = soma/count;
     printf("%d", media);
 }
+
 
 
 //EXERCICIO 3
@@ -52,6 +52,7 @@ void segundoMaior(){
 }
 
 
+
 //EXERCICIO 4
 int bitsUm (unsigned int x){
     int r=0;
@@ -67,6 +68,7 @@ int bitsUm (unsigned int x){
 }
 
 
+
 //EXERCICIO 5
 int trailingZ (unsigned int n){
     int count = 0;
@@ -80,6 +82,7 @@ int trailingZ (unsigned int n){
 }
 
 
+
 //EXERCICIO 6
 int qDig (int n) {
     int r = 0;
@@ -91,6 +94,7 @@ int qDig (int n) {
 
     return r;
 }
+
 
 
 //EXERCICIO 7
@@ -107,6 +111,7 @@ char *mystrcat(char s1[], char s2[]) {
 }
 
 
+
 //EXERCICIO 8
 char *mystrcpy(char s1[], const char s2[]) {
     int i = 0;
@@ -120,6 +125,7 @@ char *mystrcpy(char s1[], const char s2[]) {
 }
 
 
+
 //EXERCICIO 9
 int mystrcmp(char s1[], char s2[]) {
     int i = 0;
@@ -128,6 +134,7 @@ int mystrcmp(char s1[], char s2[]) {
 
     return s1[i] - s2[i];
 }
+
 
 
 //EXERCICIO 10
@@ -145,6 +152,7 @@ char *mystrstr (char s1[], char s2[]) {
 }
 
 
+
 //EXERCICIO 11
 void strrev (char s[]) {
     int i = 0, last = strlen(s) - 1;
@@ -158,6 +166,7 @@ void strrev (char s[]) {
     }
 
 }
+
 
 
 //EXERCICIO 12
@@ -186,6 +195,7 @@ void strnoV (char t[]){
 }
 
 
+
 //EXERCICIO 13
 void truncW (char t[], int n){
     int i = 0, r = 0, count = 0;
@@ -206,6 +216,8 @@ void truncW (char t[], int n){
 
     t[r] = '\0';
 }
+
+
 
 
 //EXERCICIO 14
@@ -239,15 +251,71 @@ char charMaisfreq (char s[]) {
 }
 
 
+
 //EXERCICIO 15
+int iguaisConsecutivos (char s[]) {
+    int i = 0, count = 0, countTemp = 1;
+    
+    for(; s[i]; i++){
+        if(s[i] == s[i+1]){
+            countTemp++;
+        }
+        else{
+            if(countTemp > count)
+                count = countTemp;
+            countTemp = 1;
+        }
+    }
+    
+    return count;
+}
 
 
 
 //EXERCICIO 16
+int difConsecutivos(char s[]){
+	int i = 0, count = 0, countTemp = 0;
+	char last = '\0';
+
+	for (; s[i]; i++){
+		if(s[i] != last){
+			countTemp++;
+			last = s[i];
+		}
+		else{
+			if (countTemp > count)
+				count = countTemp;
+			countTemp = 0;
+		}
+	}
+
+	if (countTemp > count){
+		count = countTemp;
+	}
+
+	return count;
+}
+
+
 
 //EXERCICIO 17
+int maiorPrefixo (char s1 [], char s2 []) {
+    int i = 0, count = 0;
+    
+    while(s1[i] && s2[i] && s1[i] == s2[i]){
+        i++;
+        count++;
+    }
+    
+    return count;
+}
+
+
 
 //EXERCICIO 18
+
+
+
 
 //EXERCICIO 19
 
