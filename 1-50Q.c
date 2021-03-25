@@ -376,18 +376,57 @@ int contaPal (char s[]) {
 
 
 
+
 //EXERCICIO 21
+int contaVogais (char s[]) {
+    int i = 0, count = 0;
+    
+    for(; s[i]; i++){
+        if(isVogal(s[i])){
+            count++;
+        }
+    }
+    
+    return count;
+}
 
 
 
 
 //EXERCICIO 22
+int contida (char a[], char b[]) {
+    int ia, ib, res = 1;
+    
+    for(ia = 0; a[ia] && res; ia++){
+        res = 0;
+        for(ib = 0; b[ib] && !res; ib++){
+            if(a[ia] == b[ib]){
+                res = 1;
+            }
+        }
+    }
+    
+    return res;
+}
 
 
 
 
 //EXERCICIO 23
-
+int palindroma (char s[]) {
+    int i = 0, last, res = 1;
+    last = strlen(s) - 1;
+    
+    for(; i <= last && res; i++){
+        if(s[i] == s[last]){
+            res = 1;
+            last--;
+        }
+        else { res = 0; }
+    }
+    
+    return res;
+}
 
 
 
